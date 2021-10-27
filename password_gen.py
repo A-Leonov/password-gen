@@ -33,16 +33,12 @@ def requirements():
     return chars, amount, length
 
 
-def choice(chars):
-    return f'{random.choice(chars)}'
-
-
 def generate_password(chars, amount, length):
     passwords = []
     for _ in range(amount):
         password = ''
         for i in range(length):
-            password += choice(chars)
+            password += random.choice(chars)
         passwords.append(password)
     return passwords
 
