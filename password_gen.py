@@ -51,6 +51,11 @@ def save_passwords(passwords):
         file.close()
 
 
-req = requirements()
-passwords = generate_password(*req)
-save_passwords(passwords)
+def main():
+    req = requirements()
+    passwords = generate_password(*req)
+    save_passwords(passwords)
+    
+    
+if __name__ == "__main__":
+    main()
